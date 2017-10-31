@@ -158,6 +158,11 @@ find . -type f -name "*.jpg" -exec jpegoptim -t -m90 --all-progressive --strip-a
 find . -type f -name "*.png" -exec optipng -o5 -strip all {} \;
 ```
 
+**Test envoi e-mail**
+```
+echo "This is the mail body" | mail example@example.com
+```
+
 **Antivirus ClamAV**
 ```
 clamscan -i -r /path
