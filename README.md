@@ -201,6 +201,12 @@ drush -y config-set system.performance css.preprocess 0
 drush -y config-set system.performance js.preprocess 0
 ```
 
+**Supprimer tous les noeufs ou type de noeuds (devel doit être installé)**
+```
+drush genc --kill 0 0 
+drush genc --kill --types=article 0 0
+```
+
 ## <a name="ngork"></a>Ngork
 ```
 ngrok http -subdomain=customsubdomain -host-header=rewrite home.dev:80
