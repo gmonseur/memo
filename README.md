@@ -195,6 +195,12 @@ sed -ie 's/\r//' fichier.sh
 
 ## <a name="drush"></a>Drush
 
+**Activer/Désactiver le mode maintenance**
+```
+drush sset system.maintenance_mode 1
+drush sset system.maintenance_mode 0
+```
+
 **Désactive l'aggregation des fichiers CSS/JS**
 ```
 drush -y config-set system.performance css.preprocess 0
