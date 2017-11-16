@@ -207,7 +207,40 @@ drush genc --kill 0 0
 drush genc --kill --types=article 0 0
 ```
 
-## <a name="ngork"></a>Ngork
+**Lister les modules activées/désactivés/non installés**
+```
+drush pml --no-core --type=module --status=Enabled
+drush pml --no-core --type=module --status=Disabled
+drush pml --no-core --type=module --status="Not installed"
+```
+
+**Lister les modules à mettre à jour (update status)**
+```
+drush ups
+```
+
+**Mettre à jour Drupal et tout les modules**
+```
+drush up
+```
+
+**Mettre à jour certains modules (séparer par un espace)**
+```
+drush up module1 module2
+```
+
+**Update db/entity**
+```
+drush updb
+drush entup
+```
+
+**Génère un lien de connexion unique pour l'utilisateur madmax**
+```
+drush uli madmax
+```
+
+## <a name="ngrok"></a>Ngork
 ```
 ngrok http -subdomain=customsubdomain -host-header=rewrite home.dev:80
 ```
