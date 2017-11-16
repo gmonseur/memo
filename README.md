@@ -235,6 +235,12 @@ drush up
 drush up module1 module2
 ```
 
+**Import/Export de config**
+```
+drush cex
+drush cim
+```
+
 **Update db/entity**
 ```
 drush updb
