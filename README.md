@@ -94,7 +94,7 @@ chown -R user:group folder
 
 **Copie récursive (+merge)**
 ```
-sudo rsync --recursive source/ destination/
+rsync --recursive source/ destination/
 ```
 
 **Copie dossier de serveur => serveur**
