@@ -67,7 +67,7 @@ tail -f /var/log/messages
 find /var/log/ -maxdepth 3 -name "*gz*" -ctime +30 -exec rm -f {} \;
 ```
 
-**Apache Liste tout les Vhosts actuellement actif dans Apache**
+**Liste tout les Vhosts actuellement actif dans Apache**
 ```
 httpd -S
 ```
