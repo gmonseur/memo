@@ -72,6 +72,14 @@ find /var/log/ -maxdepth 3 -name "*gz*" -ctime +30 -exec rm -f {} \;
 httpd -S
 ```
 
+**Liste tout les Vhosts actuellement actif dans Nginx**
+```
+grep server_name /etc/nginx/sites-enabled/* -RiI
+
+starting from version 1.9.2 you can do:
+nginx -T
+```
+
 **Check la syntaxe d'une zone DNS**
 ```
 named-checkzone example.com /var/named/example.com.db
