@@ -2,7 +2,7 @@
 
 - [Unix](#unix)
 - [Drush](#drush)
-- [Ngrok](#ngrok)
+- [Ngrok](#ngork)
 
 ## <a name="unix"></a>Unix
 
@@ -186,6 +186,11 @@ echo "This is the mail body" | mail example@example.com
 clamscan -i -r /path
 ```
 
+**Recherche les fichiers modifiés depuis les 30 derniers jours dans le répertoire courant**
+```
+find . -type f -mtime -30 -exec ls -l {} \;
+```
+
 **Screen**
 ```
 screen
@@ -271,7 +276,7 @@ drush entup
 drush uli madmax
 ```
 
-## <a name="ngrok"></a>Ngork
+## <a name="ngork"></a>Ngork
 ```
 ngrok http -subdomain=customsubdomain -host-header=rewrite home.dev:80
 ```
