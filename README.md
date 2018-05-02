@@ -188,7 +188,7 @@ clamscan -i -r /path
 
 **Recherche les fichiers modifiés depuis les 30 derniers jours dans le répertoire courant**
 ```
-find . -type f -mtime -30 -exec ls -l {} \;
+find ./ -type f -mtime -30
 ```
 
 **Recherche uniquement sur un utilisateur dans le répertoire courant**
