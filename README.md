@@ -196,7 +196,7 @@ find . -type f -mtime -30 -exec ls -l {} \;
 find . -user "apache"
 ```
 
-**Recherche tous les fichiers .jpg qui ne contiennent pas le mot "color" dans le répertoire courant
+**Recherche tous les fichiers .jpg qui ne contiennent pas le mot "color" dans le répertoire courant**
 ```
 find . -name "*.jpg" ! -name "*color*"
 ```
