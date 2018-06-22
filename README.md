@@ -6,7 +6,7 @@
 
 ## <a name="unix"></a>Unix
 
-**Ajout de la branche git dans la console prompt**
+**Ajout de la branche git dans la console prompt**<br>
 Editer le fichier /home/user/.profile
 
 ```
