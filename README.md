@@ -257,6 +257,11 @@ drush -y config-set system.performance css.preprocess 0
 drush -y config-set system.performance js.preprocess 0
 ```
 
+**Modifier le répertoire temporaire**
+```
+drush config-set system.file path.temporary /tmp
+```
+
 **Supprimer tous les noeuds ou type de noeuds (devel doit être installé)**
 ```
 drush genc --kill 0 0 
