@@ -6,6 +6,12 @@
 
 ## <a name="unix"></a>Unix
 
+**Info Linux**
+
+```
+screenfetch
+```
+
 **Ajout de la branche git dans la console prompt**<br>
 Editer le fichier /home/user/.profile
 
