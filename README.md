@@ -2,6 +2,7 @@
 
 - [Unix](#unix)
 - [Drush](#drush)
+- [Docker](#docker)
 - [Ngrok](#ngork)
 
 ## <a name="unix"></a>Unix
@@ -312,6 +313,14 @@ drush entup
 **Génère un lien de connexion unique pour l'utilisateur madmax**
 ```
 drush uli madmax
+```
+
+## <a name="docker"></a>Docker
+```
+sudo systemctl start docker
+sudo docker ps
+sudo docker-compose build
+ls -l /var/run/docker.sock 
 ```
 
 ## <a name="ngork"></a>Ngork
