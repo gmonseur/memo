@@ -317,10 +317,29 @@ drush uli madmax
 
 ## <a name="docker"></a>Docker
 ```
-sudo systemctl start docker
-sudo docker ps
-sudo docker-compose build
+systemctl start docker
+
+docker ps
+docker ps -a
+docker ps -l
+
+docker images
+
+docker exec -it 'container' bash
+
+docker-compose build
+docker-compose up
+docker-compose up -d
+docker-compose down
+docker-compose restart
+docker-compose exec
+docker-compose logs
+docker-compose logs -f 
+docker-compose logs -f 'container'
+
 ls -l /var/run/docker.sock 
+
+
 ```
 
 ## <a name="ngork"></a>Ngork
