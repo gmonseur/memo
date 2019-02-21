@@ -93,7 +93,10 @@ find /var/log/ -maxdepth 3 -name "*gz*" -ctime +30 -exec rm -f {} \;
 
 **Liste tout les Vhosts actuellement actif dans Apache**
 ```
-httpd -S
+# apache2ctl -S   [On Debian/Ubuntu]
+# apachectl -S    [On CentOS/RHEL]
+OR
+# httpd -S
 ```
 
 **Liste tout les Vhosts actuellement actif dans Nginx**
