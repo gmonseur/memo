@@ -236,11 +236,14 @@ screen
 - CTRL+A et d = detached
 - CTRL+A et :quit = quit
 
+
 ```
 // Liste
 	screen -ls 
 // Re-attach
-	screen -r pid
+	screen -r <pid>
+// Kill 
+	screen -S -X <pid> quit
 ```
 
 **Supprimer le ^M venant de Windows dans les fichiers txt**
