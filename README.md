@@ -274,6 +274,10 @@ drush -y config-set system.performance js.preprocess 0
 ```
 drush config-set system.file path.temporary /tmp
 ```
+**Tail sur le watchdog**
+```
+watch -n 1 vendor/bin/drush ws
+```
 
 **Supprimer tous les noeuds ou type de noeuds (devel doit être installé)**
 ```
