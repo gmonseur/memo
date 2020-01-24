@@ -349,6 +349,8 @@ docker-compose logs -f 'container'
 
 ls -l /var/run/docker.sock 
 
+docker container stop $(docker container ls -q --filter name=name'*')
+
 
 ```
 
