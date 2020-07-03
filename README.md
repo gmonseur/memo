@@ -132,6 +132,19 @@ ls -al | wc -l
 chown -R user:group folder
 ```
 
+**Compresser et décompresser en tar.gz**
+
+Compresser
+```
+tar czvf < nom_archive >.tar.gz < nom_rep >
+```
+
+Décompresser
+```
+tar xzvf < nom_archive >.tar.gz
+tar xzvf < nom_archive >.tar.gz  -C /home/neaj/dir3
+```
+
 **Copie récursive (+merge)**
 ```
 rsync --recursive source/ destination/
