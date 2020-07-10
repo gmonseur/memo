@@ -77,6 +77,12 @@ iptables -L
 iptables -F INPUT
 ```
 
+**Composer update memory limit**
+```
+which composer
+php -d memory_limit=512M composer update
+```
+
 **Logs en temps réél**
 ```
 tail -f /var/log/messages
