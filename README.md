@@ -167,6 +167,11 @@ scp -r -P 2221 your_username@domain.com:/some/remote/directory . // => le point 
 /etc/init.d/httpd stop
 /etc/init.d/httpd start
 /etc/init.d/httpd restart
+OU
+apachectl configtest
+apachectl graceful
+systemctl status httpd
+
 ```
 
 **Test cfg nginx restart**
