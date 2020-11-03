@@ -4,6 +4,7 @@
 - [Drush](#drush)
 - [Docker](#docker)
 - [Ngrok](#ngork)
+- [GitKraken](#gitkraken)
 
 ## <a name="unix"></a>Unix
 
@@ -381,6 +382,12 @@ docker container stop $(docker container ls -q --filter name=name'*')
 ## <a name="ngork"></a>Ngork
 ```
 ngrok http -subdomain=customsubdomain -host-header=rewrite home.dev:80
+```
+
+## <a name="gitkraken"></a>GitKraken
+```
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+sudo dpkg -i gitkraken-amd64.deb
 ```
 
 
