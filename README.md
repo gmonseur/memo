@@ -36,6 +36,12 @@ Recharger le profile
 /usr/sbin/ntpdate ntp.ovh.net
 ```
 
+**Synchroniser l'heure**
+```
+find /home/user -type f -exec chmod 0664 {} \; // Files
+find /home/user -type d -exec chmod 0775 {} \; // Folder
+```
+
 **Process apache en tmp réel**
 ```
 watch -n 1 "echo -n 'Apache Processes: ' && ps -C httpd --no-headers | wc -l && free -m"
