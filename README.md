@@ -42,37 +42,9 @@ find /home/user -type f -exec chmod 0664 {} \; // Files
 find /home/user -type d -exec chmod 0775 {} \; // Folder
 ```
 
-**Process apache en tmp réel**
+**Ports Open**
 ```
-watch -n 1 "echo -n 'Apache Processes: ' && ps -C httpd --no-headers | wc -l && free -m"
-```
-
-**Nombre de connexions simultanées**<br>
-- *Web*
-```
-netstat -tanpu | grep :80 | awk '{print $5}' | cut -f 1 -d ":" | sort |uniq -c
-```
-- *Apache*
-```
-netstat -tanp | grep ESTABLISHED | grep http | wc -l
-```
-- *Test IP*
-```
-netstat -tanp | grep ESTABLISHED | grep http | awk {'print $5'} | sort -n 
-netstat -an | grep SYN_RECV |wc -l
-```
-- *Test IP SYN Flood*
-```
-for i in ` netstat -tanpu | grep "SYN_RECV" | awk {'print $5'} | cut -f 1 -d ":" | sort | uniq -c | sort -n | awk {'if ($1 > 3) print $2'}` ; do echo $i; done 
-```
-- *Max client*
-```
-cat /var/log/httpd/error_log | grep MaxClient
-```
-
-**Bloquer les ip à l'origine d'une attaque SYN Flood**
-```
-for i in ` netstat -tanpu | grep "SYN_RECV" | awk {'print $5'} | cut -f 1 -d ":" | sort | uniq -c | sort -n | awk {'if ($1 > 3) print $2'}` ; do echo $i; iptables -A INPUT -s $i/24 -j DROP; done 
+sudo netstat -tulpn | grep LISTEN
 ```
 
 **Iptables Firewall**
@@ -285,6 +257,39 @@ cat -A fichier.sh
 - *Pour supprimer*
 ```
 sed -ie 's/\r//' fichier.sh
+```
+
+**Process apache en tmp réel**
+```
+watch -n 1 "echo -n 'Apache Processes: ' && ps -C httpd --no-headers | wc -l && free -m"
+```
+
+**Nombre de connexions simultanées**<br>
+- *Web*
+```
+netstat -tanpu | grep :80 | awk '{print $5}' | cut -f 1 -d ":" | sort |uniq -c
+```
+- *Apache*
+```
+netstat -tanp | grep ESTABLISHED | grep http | wc -l
+```
+- *Test IP*
+```
+netstat -tanp | grep ESTABLISHED | grep http | awk {'print $5'} | sort -n 
+netstat -an | grep SYN_RECV |wc -l
+```
+- *Test IP SYN Flood*
+```
+for i in ` netstat -tanpu | grep "SYN_RECV" | awk {'print $5'} | cut -f 1 -d ":" | sort | uniq -c | sort -n | awk {'if ($1 > 3) print $2'}` ; do echo $i; done 
+```
+- *Max client*
+```
+cat /var/log/httpd/error_log | grep MaxClient
+```
+
+**Bloquer les ip à l'origine d'une attaque SYN Flood**
+```
+for i in ` netstat -tanpu | grep "SYN_RECV" | awk {'print $5'} | cut -f 1 -d ":" | sort | uniq -c | sort -n | awk {'if ($1 > 3) print $2'}` ; do echo $i; iptables -A INPUT -s $i/24 -j DROP; done 
 ```
 
 ## <a name="drush"></a>Drush
