@@ -193,10 +193,17 @@ mysql -u USERNAME -pPASSWORD DATABASE < database.sql
 mysql -f -u USERNAME -pPASSWORD DATABASE < database.sql
 ```
 
+**Performance_schema slow queries**
+```
+SELECT SCHEMA_NAME, DIGEST, DIGEST_TEXT, COUNT_STAR, SUM_TIMER_WAIT/1000000000000 SUM_TIMER_WAIT_SEC, MIN_TIMER_WAIT/1000000000000 MIN_TIMER_WAIT_SEC, AVG_TIMER_WAIT/1000000000000 AVG_TIMER_WAIT_SEC, MAX_TIMER_WAIT/1000000000000 MAX_TIMER_WAIT_SEC, SUM_LOCK_TIME/1000000000000 SUM_LOCK_TIME_SEC, FIRST_SEEN, LAST_SEEN FROM events_statements_summary_by_digest;
+```
+
+
 **Mysqlcheck**
 ```
 mysqlcheck -o --all-databases -u root -ppassword
 ```
+
 
 **Optimisation images (jpg et png)**<br>
 Besoin des packages *jpegoptim* et *optipng*.<br>
