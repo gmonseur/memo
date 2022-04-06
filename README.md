@@ -5,6 +5,7 @@
 - [Docker](#docker)
 - [Ngrok](#ngork)
 - [GitKraken](#gitkraken)
+- [Imagemagick](#imagemagick)
 
 ## <a name="unix"></a>Unix
 
@@ -408,8 +409,11 @@ wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 sudo dpkg -i gitkraken-amd64.deb
 ```
 
+## <a name="imagemagick"></a>Imagemagick
+https://www.howtogeek.com/109369/how-to-quickly-resize-convert-modify-images-from-the-linux-terminal/
 
-
-
+```
+for file in *.jpg; do convert $file -resize 2000 $file; done
+```
 
 
