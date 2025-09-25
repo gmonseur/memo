@@ -371,30 +371,36 @@ drush uli madmax
 
 ## <a name="docker"></a>Docker
 ```
-systemctl start docker
+# Gestion du service Docker
+systemctl start docker   # Démarre le service Docker
 
-docker ps
-docker ps -a
-docker ps -l
+# Lister les containers
+docker ps                # Affiche les containers en cours d’exécution
+docker ps -a             # Affiche tous les containers (actifs ou arrêtés)
+docker ps -l             # Affiche le dernier container créé
 
-docker images
+# Lister les images
+docker images            # Affiche toutes les images Docker présentes sur le système
 
-docker exec -it 'container' bash
+# Accéder à un container
+docker exec -it 'container' bash   # Ouvre un terminal interactif dans le container
 
-docker-compose build
-docker-compose up
-docker-compose up -d
-docker-compose down
-docker-compose restart
-docker-compose exec
-docker-compose logs
-docker-compose logs -f 
-docker-compose logs -f 'container'
+# Docker Compose
+docker-compose build      # Reconstruit les images du projet
+docker-compose up         # Démarre les containers et affiche les logs en direct
+docker-compose up -d      # Démarre les containers en arrière-plan (détaché)
+docker-compose down       # Arrête et supprime les containers, réseaux et volumes
+docker-compose restart    # Redémarre les containers
+docker-compose exec       # Exécute une commande dans un container en cours
+docker-compose logs       # Affiche les logs des containers
+docker-compose logs -f    # Suit les logs en temps réel
+docker-compose logs -f 'container'  # Suit les logs d’un container spécifique
 
-ls -l /var/run/docker.sock 
+# Vérification du socket Docker
+ls -l /var/run/docker.sock  # Vérifie les permissions du socket Docker
 
+# Arrêter tous les containers correspondant à un nom
 docker container stop $(docker container ls -q --filter name=name'*')
-
 
 ```
 
