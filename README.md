@@ -386,15 +386,15 @@ docker images            # Affiche toutes les images Docker présentes sur le sy
 docker exec -it 'container' bash   # Ouvre un terminal interactif dans le container
 
 # Docker Compose
-docker-compose build      # Reconstruit les images du projet
-docker-compose up         # Démarre les containers et affiche les logs en direct
-docker-compose up -d      # Démarre les containers en arrière-plan (détaché)
-docker-compose down       # Arrête et supprime les containers, réseaux et volumes
-docker-compose restart    # Redémarre les containers
-docker-compose exec       # Exécute une commande dans un container en cours
-docker-compose logs       # Affiche les logs des containers
-docker-compose logs -f    # Suit les logs en temps réel
-docker-compose logs -f 'container'  # Suit les logs d’un container spécifique
+docker compose build      # Reconstruit les images du projet
+docker compose up         # Démarre les containers et affiche les logs en direct
+docker compose up -d      # Démarre les containers en arrière-plan (détaché)
+docker compose down       # Arrête et supprime les containers, réseaux et volumes
+docker compose restart    # Redémarre les containers
+docker compose exec       # Exécute une commande dans un container en cours
+docker compose logs       # Affiche les logs des containers
+docker compose logs -f    # Suit les logs en temps réel
+docker compose logs -f 'container'  # Suit les logs d’un container spécifique
 
 # Vérification du socket Docker
 ls -l /var/run/docker.sock  # Vérifie les permissions du socket Docker
